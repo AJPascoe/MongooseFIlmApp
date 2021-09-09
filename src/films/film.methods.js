@@ -14,4 +14,14 @@ exports.listMovies = async () => {
     console.log(list);
 };
 
-
+exports.updateMovie = async (updateObj) => {
+    await Film.updateOne(
+      { name: updateObj.filter },
+      { $set: {like:updateObj.like} }
+    );
+  };
+    
+  exports.deleteMovie = async (deleteObj) => {
+    await Film.deleteOne({ name: deleteObj.filter });
+  };
+  
