@@ -13,6 +13,14 @@ const filmSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    year: {
+        type: Number,
+        required: true,
+    },
+    rating:{
+        type: String,
+        required: true,
+    },
 });
 
 const Film = mongoose.model("Film", filmSchema); // assigns schema to a name.
